@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livix | Smart Home Evolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .pulse { animation: pulse-glow 2s ease-in-out infinite; }
+        .rotate-gear { animation: rotate-slow 8s linear infinite; }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-xl w-full text-center">
+        <div class="mb-8 flex justify-center">
+            <div class="relative">
+                <svg class="w-24 h-24 rotate-gear" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="35" stroke="#3B82F6" stroke-width="2" stroke-dasharray="8 4" />
+                    <circle cx="50" cy="50" r="15" fill="#3B82F6" class="pulse" />
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="text-6xl font-black tracking-tighter text-blue-500 mb-2">LIVIX</h1>
+        <p class="text-blue-300 font-medium tracking-widest uppercase text-sm mb-10">Smart Home Evolution</p>
+
+        <div class="glass-card rounded-3xl p-8 mb-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-white">Sedang Dalam Pembaruan</h2>
+            <p class="text-slate-400 leading-relaxed mb-8">
+                Kami sedang menyiapkan ekosistem rumah pintar yang lebih terintegrasi untuk Anda. 
+                <span class="text-blue-400 font-semibold">livixhomepage.ofc.id</span> akan segera kembali.
+            </p>
+
+            <div class="space-y-2">
+                <div class="flex justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    <span>System Update</span>
+                    <span>65%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="bg-blue-500 h-full rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)]" style="width: 65%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-10">
+            <div class="p-4 rounded-2xl bg-slate-800/50">
+                <div class="text-blue-400 mb-1 text-xl font-bold">24/7</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-tighter">Security</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/50 border border-blue-500/20 shadow-lg shadow-blue-500/5">
+                <div class="text-blue-400 mb-1 text-xl font-bold">AI</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-tighter">Control</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-800/50">
+                <div class="text-blue-400 mb-1 text-xl font-bold">OTA</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-tighter">Updates</div>
+            </div>
+        </div>
+
+        <div class="text-sm text-slate-500">
+            Butuh bantuan? 
+            <a href="mailto:support@livix.id" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                support@livix.id
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
